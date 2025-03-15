@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom right, #C084FC, #6D28D9);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    width: 95%;
+    max-width: 600px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.song-list {
+    margin-top: 25px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.song-item:hover {
+    transform: scale(1.05); /* Slight lift effect */
+}
+
+/* Album Cover Hover Effect */
+img {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1); /* Slightly larger on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* Deeper shadow */
+}
+
+/* Button Hover Effect */
+button {
+    background: #8B5CF6;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #6D28D9; /* Darker purple on hover */
+    transform: translateY(-3px); /* Button lift effect */
+}
+
+/* Audio Player */
+audio {
+    margin-top: 25px;
+    width: 100%;
+}
+
+/* Hidden Message Hover Effect */
+#specialMessage {
+    margin-top: 30px;
+    padding: 25px;
+    background: #E9D5FF;
+    color: #6D28D9;
+    border-radius: 15px;
+    font-size: 22px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+#specialMessage.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hidden Message Hover Animation */
+#specialMessage:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Enhanced glow on hover */
+    transform: translateY(-3px); /* Slight lift */
+}
+
+
+
+/* Sunset Animation */
+@keyframes sunset {
+    from {
+        background-color: #1a1a1a; /* Dark color (night) */
+    }
+    to {
+        background-color: #ff9a9e; /* Warm sunset color */
+    }
+}
+
+body.sunset {
+    animation: sunset 3s forwards;
+}
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#progressBar {
+    height: 100%;
+    background-color: #ff9a9e;
+    width: 0%;
+    transition: width 0.2s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+#specialMessage {
+    padding: 20px;
+    background-color: #ffebf0;
+    color: #333;
+    border: 2px solid #ff9a9e;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#specialMessage.show {
+    opacity: 1;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Dedication</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>For You, My Lovey</h1>
+        <p>Finish the song for a message</p>
+        <p>Click a song to play:</p>
+        <div class="song-list">
+            <div class="song-item" onclick="playMusic('song1_P.mp3')">
+                <img src="cover1.jpeg" alt="Song 1" />
+                <button>Song 1</button>
+            </div>
+            <div class="song-item" onclick="playMusic('song2_T.mp3')">
+                <img src="cover2.jpeg" alt="Song 2" />
+                <button>Song 2</button>
+            </div>
+            <div class="song-item" onclick="playMusic('song3_D.mp3')">
+                <img src="cover3.jpeg" alt="Song 3" />
+                <button>Song 3</button>
+            </div>
+        </div>
+        <audio id="audioPlayer" controls></audio>
+
+        <!-- Custom Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+
+        <!-- Hidden message -->
+        <div id="specialMessage" class="hidden">
+            You’re the best part of my life. I love you forever.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
